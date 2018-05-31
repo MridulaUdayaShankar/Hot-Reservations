@@ -1,1 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hot - Reservations</title>
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
+</head>
+<body>
+
+  <div class="container">
+    <div class="jumbotron">
+        <div class="text-center">
+      <h1> <span class="fa fa-fire"></span> Hot Reservations <span class="fa fa-fire"></span></h1>
+      </div>
+      <div class="text-center">
+      <h3>The greatest resource for the Hottest seats in town!</h3>
+      </div>
+      <hr>
+      <a href="/view"><button class="btn btn-danger btn-lg"><span class="fa fa-eye"></span> View Tables</button></a>
+      <a href="/home"><button class="btn btn-danger btn-lg"><span class="fa fa-home"></span> Home</button></a>
+    </div>
+    <div class="row">
+
+      <div class="col-lg-12">
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title"><strong>Table Reservation</strong></h3>
+          </div>
+          <div class="panel-body">
+            <form role="form">
+
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name">
+              </div>
+
+              <div class="form-group">
+                <label for="number">Phone Number</label>
+                <input type="text" class="form-control" id="role">
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" class="form-control" id="age">
+              </div>
+
+              <div class="form-group">
+                <label for="user-name">Unique ID</label>
+                <input type="text" class="form-control" id="force-points">
+              </div>
+
+            </form>
+            <div class="text-left">
+              <button type="submit" class="btn btn-primary btn-md" id="add-btn">Submit </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <br>
+  <footer class="footer">
+    <div class="container">
+        <p>
+            <a href="#" id="clear">Clear Table</a> |
+            <a href="/api/tables">API Table Link</a> |
+            <a href="/api/waitlist">API Wait List</a>
+        </p>
+    </div>
+</footer>
+
+  </script>
+</body>
+</html>
