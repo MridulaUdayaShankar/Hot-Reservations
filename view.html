@@ -79,7 +79,17 @@
 
     <!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS LOADED FROM OUR SERVER -->
     <script>
+        $.get("/api/tables", function(data){
+            console.log(data);
+           
+            $("#tableSection").append("<div>").addClass("name"); 
+            $(".name").text(data[0].name);
         
+            
+        })
+   
+    
+ 
     </script>
 
 </body>

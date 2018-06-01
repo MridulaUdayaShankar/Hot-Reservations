@@ -99,12 +99,8 @@
       email: $("#email").val().trim(),
       uniqueId: $("#user-name").val().trim(),
     };
-    $.post("api/tables",newRes)
-    .then(function(data){
-      
-
-       
-    })
+    $.post("/api/reserve",newRes)
+    
   })
 
 </script>

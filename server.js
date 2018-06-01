@@ -59,10 +59,10 @@ app.get("/api/tables", function(req, res) {
 });
 
 app.get("/api/waitList", function(req, res) {
-  return res.json(tables);
+  return res.json(waitListTable);
 });
 
-app.post("/api/tables", function(req, res) {
+app.post("/api/reserve", function(req, res) {
   var currentRes = req.body;
 
   console.log(currentRes);
@@ -79,15 +79,19 @@ app.post("/api/tables", function(req, res) {
   res.json(currentRes);
 });
 
-app.post("/api/waitList", function(req, res) {
-  var waitingList = req.body;
 
-  console.log(waitingList);
 
-  waitListTable.push(waitingList);
 
-  res.json(waitingList);
-});
+
+// app.post("/api/waitList", function(req, res) {
+//   var waitingList = req.body;
+
+//   console.log(waitingList);
+
+//   waitListTable.push(waitingList);
+
+//   res.json(waitingList);
+// });
 
 app.listen(PORT, function() {
   console.log("App listening on PORT " + PORT);
