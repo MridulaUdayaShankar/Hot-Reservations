@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Hot - Reservations</title>
@@ -10,20 +11,30 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 </head>
+
 <body>
 
   <div class="container">
     <div class="jumbotron">
-        <div class="text-center">
-      <h1> <span class="fa fa-fire"></span> Hot Reservations <span class="fa fa-fire"></span></h1>
+      <div class="text-center">
+        <h1>
+          <span class="fa fa-fire"></span> Hot Reservations
+          <span class="fa fa-fire"></span>
+        </h1>
       </div>
       <div class="text-center">
-      <h3>The greatest resource for the Hottest seats in town!</h3>
+        <h3>The greatest resource for the Hottest seats in town!</h3>
       </div>
       <hr>
       <div class="text-center">
-      <a href="/view"><button class="btn btn-danger btn-lg"><span class="fa fa-eye"></span> View Tables</button></a>
-      <a href="/"><button class="btn btn-danger btn-lg"><span class="fa fa-home"></span> Home</button></a>
+        <a href="/view">
+          <button class="btn btn-danger btn-lg">
+            <span class="fa fa-eye"></span> View Tables</button>
+        </a>
+        <a href="/">
+          <button class="btn btn-danger btn-lg">
+            <span class="fa fa-home"></span> Home</button>
+        </a>
       </div>
     </div>
     <div class="row">
@@ -32,7 +43,9 @@
 
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h3 class="panel-title"><strong>Table Reservation</strong></h3>
+            <h3 class="panel-title">
+              <strong>Table Reservation</strong>
+            </h3>
           </div>
           <div class="panel-body">
             <form role="form">
@@ -70,14 +83,33 @@
   <br>
   <footer class="footer">
     <div class="container">
-        <p>
-            <a href="#" id="clear">Clear Table</a> |
-            <a href="/api/tables">API Table Link</a> |
-            <a href="/api/waitlist">API Wait List</a>
-        </p>
+      <p>
+        <a href="#" id="clear">Clear Table</a> |
+        <a href="/api/tables">API Table Link</a> |
+        <a href="/api/waitlist">API Wait List</a>
+      </p>
     </div>
-</footer>
+  </footer>
+<script type = "text/javascript">
+  $("#add-btn").on("click", function(event){
+    event.preventDefault();
+    var newRes = {
+      name: $("#name").val().trim(),
+      phone: $("#number").val().trim(),
+      email: $("#email").val().trim(),
+      uniqueId: $("#user-name").val().trim(),
+    };
+    $.post("api/tables",newRes)
+    .then(function(data){
+      
 
-  </script>
+       
+    })
+  })
+
+</script>
+ 
+
 </body>
+
 </html>
